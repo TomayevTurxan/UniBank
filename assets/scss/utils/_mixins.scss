@@ -1,0 +1,38 @@
+@mixin display-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin display-center-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin main-btn {
+    @include display-center;
+    width: 150px;
+    padding: 14px 30px;
+    font-size: 14px;
+    background: #ff6400;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px -10px rgba(255, 107, 0, .51);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+
+    a {
+        @include display-center;
+    }
+
+    i {
+        margin-left: 10px;
+    }
+}
+
+@mixin a-i-footer ($color){
+    padding: 3px 8px;
+    background-color: $color;
+    border-radius: 50%;
+}

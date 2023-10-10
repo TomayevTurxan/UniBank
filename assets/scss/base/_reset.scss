@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    font-family: "CocoSharp", sans-serif;
+    font-weight: 700;
+}
+
+ul {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+section {
+    padding: 50px 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "CocoSharp", sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+span {
+    font-family: "CocoSharp", sans-serif;
+    color: white;
+}
+i{
+    color: white;
+    font-size: 18px;
+}
+p {
+    font-family: "CocoSharp", sans-serif;
+    color: white;
+}

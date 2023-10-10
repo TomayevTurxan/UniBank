@@ -1,0 +1,345 @@
+body {
+    background-color: $bgc;
+}
+
+#nav {
+    padding: 50px 0px;
+
+    .responsive {
+        display: none;
+    }
+
+    .img-logo {
+        width: 100%;
+
+        .img {
+            @extend %img-box;
+        }
+    }
+
+    .nav-bar {
+        ul {
+            @include display-center;
+            justify-content: space-between;
+            padding: 0;
+
+            li {
+                a {
+                    @extend %a-navbar;
+                }
+            }
+        }
+    }
+
+    .call {
+        padding: 12px;
+        border-radius: 15px;
+        border: 1px solid #969696;
+        text-align: right;
+
+        i {
+            color: $main-color;
+        }
+    }
+}
+
+#card {
+    .btn-responsive {
+        display: none;
+    }
+    h1{
+        font-weight: 800;
+    }
+    .blog-card {
+        border-radius: 10px;
+        padding: 50px 65px;
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        background-color: #1a1a1a;
+
+        .img-box {
+            @extend %img-box;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .card-title {
+            padding: 0px 50px;
+
+            .card-head {
+                @include display-center-between;
+
+                h1 {
+                    font-size: 24px;
+                    font-weight: 900;
+                }
+
+                .btn {
+                    a {
+                        @include main-btn;
+
+                        i {
+                            margin-left: 8px;
+                        }
+                    }
+                }
+            }
+
+            .icon-title {
+                display: flex;
+                align-items: center;
+
+                i {
+                    margin-right: 20px;
+                    color: $main-color;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+#debet-card {
+    h1{
+        font-weight: 800;
+    }
+    .blog {
+        padding: 50px;
+        background-color: $blog-color;
+        border-radius: 20px;
+
+        .img-box {
+            @extend %img-box;
+            width: 70%;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-top: 20px;
+        }
+
+        P {
+            font-size: 15px;
+            margin: 10px 0px;
+        }
+
+        .btn {
+            @include main-btn;
+
+            a {
+                color: white;
+            }
+        }
+    }
+}
+
+#footer {
+    .footer-menu {
+        display: flex;
+        justify-content: space-around;
+
+        .footer-ul {
+            span {
+                margin-bottom: 10px;
+                display: block;
+                font-weight: 600;
+            }
+
+            ul {
+                display: inline-block;
+
+                li {
+                    margin: 15px 0px;
+
+                    a {
+                        color: white;
+                        font-size: 12px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-links {
+        width: 30%;
+        display: flex;
+        a {
+            @include a-i-footer(grey);
+            margin-right: 30px;
+            i {
+                color: white;
+                font-size: 15px;
+            }
+        }
+
+        a:nth-child(1) {
+            @include a-i-footer($main-color);
+        }
+
+        a:nth-child(2) {
+            @include a-i-footer($main-color);
+        }
+    }
+
+    .unibank {
+        display: flex;
+        border-top: 1px solid grey;
+        padding-top: 30px;
+        span {
+            font-size: 11px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        p {
+
+            font-size: 13px;
+        }
+    }
+}
+
+
+
+@media (max-width: 992px) {
+    #nav {
+        padding-top: 30px 0px;
+        .main {
+            display: none;
+        }
+
+        .responsive {
+            display: block;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+
+            .icon-menu {
+                width: 23%;
+
+                i {
+                    padding: 12px;
+                    border-radius: 50%;
+                    background-color: #1a1a1a;
+                }
+            }
+
+            .img-logo {
+                width: 30%;
+
+                img {
+                    width: 40px;
+                    padding-left: 14px;
+                }
+            }
+
+            .phone {
+                width: 35%;
+            }
+        }
+    }
+
+    #card {
+        padding-top: 0;
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card-title {
+            padding: 0 !important;
+
+            .card-head {
+                display: none !important;
+            }
+
+            p {
+                text-align: center;
+                font-size: 12px;
+                margin: 20px 0px;
+            }
+
+            .btn-responsive {
+                width: 200px;
+                margin: 20px auto;
+                display: block;
+
+                a {
+                    @include main-btn;
+
+                    i {
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
+
+        .icon-title {
+            text-align: center;
+            flex-direction: column;
+
+            i {
+                margin-right: 0 !important;
+            }
+
+            h5 {
+                font-size: 15px;
+            }
+        }
+    }
+
+    #debet-card {
+        .blog {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .img-box {
+                width: 100%;
+            }
+
+            h2 {
+                font-size: 15px;
+            }
+
+            p {
+                font-size: 13px;
+            }
+        }
+    }
+    #footer{
+        .footer-menu{
+            display: none;
+        }
+        .unibank{
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    #nav {
+        .nav-bar {
+            ul {
+                li {
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
